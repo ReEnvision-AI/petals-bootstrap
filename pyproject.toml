@@ -1,0 +1,23 @@
+[project]
+name = "petals-bootstrap"
+version = "0.1.0"
+description = "Used for launching lightweight CPU machines serving as bootstrap nodes to a Petals swarm."
+readme = "README.md"
+authors = [
+    { name = "Bradley Jones", email = "pgawestjones@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "hivemind",
+    "requests==2.32.3",
+]
+
+[project.scripts]
+petals-bootstrap = "petals_bootstrap:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+hivemind = { git = "https://github.com/ReEnvision-AI/hivemind" }
